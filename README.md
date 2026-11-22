@@ -14,7 +14,7 @@ Review Streak is an Android companion for AnkiDroid. Answer a flashcard in AnkiD
 - A day counts once after AnkiDroid records an answer, even if you stop before finishing the deck. Opening a deck or revealing an answer alone earns no credit. Answers across all decks count.
 - Days follow the phone’s local calendar. A streak through yesterday stays active throughout today. If you skip today, it resets tomorrow.
 - The public AnkiDroid API exposes only the latest timestamp for each card. Review Streak checks cards rated in the last 31 Anki scheduling days and saves the calendar dates it discovers. If you check after the same card was reviewed on several days, earlier dates may be missing from the initial or recovered history. The best streak is based on recorded dates. Synced reviews can also count if AnkiDroid exposes their timestamps.
-- Review Streak requests AnkiDroid’s shared database permission and only queries the last-review timestamp field. It saves dates on your device and has no Internet permission. Clearing its app data or uninstalling it clears the dates it has saved.
+- The Android permission dialog describes AnkiDroid’s shared read/write permission. Review Streak uses it to query only the last-review timestamp field. It saves dates on your device and has no Internet permission. Clearing its app data or uninstalling it clears the dates it has saved.
 
 ## Build
 
