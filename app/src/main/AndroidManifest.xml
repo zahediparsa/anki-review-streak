@@ -1,0 +1,22 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="io.github.zahediparsa.reviewstreak"
+    android:versionCode="1" android:versionName="1.0.0">
+    <uses-sdk android:minSdkVersion="26" android:targetSdkVersion="35" />
+    <uses-permission android:name="com.ichi2.anki.permission.READ_WRITE_DATABASE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <queries>
+        <package android:name="com.ichi2.anki" />
+        <provider android:authorities="com.ichi2.anki.flashcards" />
+    </queries>
+    <application android:label="Review Streak" android:icon="@drawable/streak_icon"
+        android:theme="@style/AppTheme" android:allowBackup="false">
+        <activity android:name=".Dashboard" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <service android:name=".ReviewJob" android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+    </application>
+</manifest>
